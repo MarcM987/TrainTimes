@@ -60,7 +60,7 @@ database.ref().on("child_added", function(snapshot) {
     
 
 
-    var nextArrival = "11:40 PM"; //how to do this using moments? 
+    var nextArrival = "11:59 PM"; //how to do this using moments? 
     /*if firstTime < now
     difference between then and now divided by freqeuncy
     nextArrival = now + remainder
