@@ -47,8 +47,6 @@ $("#submit-btn").on("click", function(event) {
 database.ref().on("child_added", function(snapshot) {
     // storing the snapshot.val() in a variable for convenience
     var sv = snapshot.val();
-    var ampmTime = "";
-    // var ap = "";
 
     // Console.loging the last user's data
     console.log(sv.tainName);
@@ -56,24 +54,20 @@ database.ref().on("child_added", function(snapshot) {
     console.log(sv.firstTime);
     console.log(sv.Frequency);
 
-    // if(parseInt(sv.firstTime.slice(0,-3))>12){
-    //     amppmTime = toString(parseInt(toString(sv.firstTime).slice(0,-3)) - 12) + toString(nextArrival).slice(-2) + " PM";
-    //     ap = "P";
-    // }else{
-    //     ampmTime = sv.firstTime + " AM"
-    //     ap = "A";
-    // }
-    ampmTime = moment(sv.firstTime, 'HH:mm').format('hh:mm A');
+
+    var ampmTime = moment(sv.firstTime, 'HH:mm').format('hh:mm A');
     console.log(ampmTime);
     
 
-    //if ft < now
-    //difference between then and now divided by freqeuncy
-    //nexttime = now + remainder
-    //else, not available yet
 
-    console.log(moment().diff(moment(ampmTime,'minutes')));
-    var nextArrival = "11:30 PM"; //how to do this???
+    var nextArrival = "11:40 PM"; //how to do this using moments? 
+    //if firstTime < now
+    //difference between then and now divided by freqeuncy
+    //nextTime = now + remainder
+    //else, nextTime = difference between then and now
+    // if(){
+
+    // }
 
     
 
