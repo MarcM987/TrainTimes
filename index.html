@@ -48,23 +48,23 @@
                   <h1 class="panel-title">Add Train</h1>
               </div>
               <div class="panel-body">
-                <form role="form">
+                <form class="form">
                   <div class="form-group">
                     <label for="name">Train Name</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="trainName">
                   </div>
                   <div class="form-group">
                     <label for="select-number">Destination</label>
-                    <input type="text" class="form-control" id="role">
+                    <input type="text" class="form-control" id="dest">
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="search">First Train Time (HH:mm - military time)</label>
-                    <input type="text" class="form-control" id="start-date">
+                    <input type="text" class="form-control" id="first-time">
                   </div>
                   <div class="form-group">
                     <label for="search">Frequency (min)</label>
-                    <input type="text" class="form-control" id="rate">
+                    <input type="text" class="form-control" id="freq">
                   </div>
                   <button class="btn btn-dark" id="submit-btn" type="button">Submit</button>
                   <button class="btn btn-dark" id="submit-btn" type="button">Update</button>
@@ -74,15 +74,17 @@
             </div>
           </div>
 
+        
+          
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
+
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
         <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
         <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://momentjs.com/downloads/moment.js"></script>
 
         <script src="./assets/javascript/app.js"></script>
     </body>
