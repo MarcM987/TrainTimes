@@ -1,0 +1,16 @@
+.panel-body a {
+    word-break: break-all;
+  }
+  .jumbotron {
+    background-color: brown;
+  }
+  .jumbotron h1 {
+    text-align: center;
+    color: #ffffff;
+  }
+  .panel-title {
+    font-weight: bold;
+  }
+  .train-list a {
+    cursor: pointer;
+  }
