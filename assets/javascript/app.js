@@ -48,6 +48,7 @@ database.ref().on("child_added", function(snapshot) {
     // storing the snapshot.val() in a variable for convenience
     var sv = snapshot.val();
     var ampmTime = "";
+    var ap = "";
 
     // Console.loging the last user's data
     console.log(sv.tainName);
@@ -55,16 +56,18 @@ database.ref().on("child_added", function(snapshot) {
     console.log(sv.firstTime);
     console.log(sv.Frequency);
 
-    // if(parseInt(sv.firstTime.slice(0,-3))>12){
-    //     amppmTime = toString(parseInt((sv.firstTime).slice(0,-3)) - 12) + (nextArrival).slice(-2) + " PM";
-    // }else{
-    //     ampmTime = sv.firstTime + " AM"
-    // }
-    // console.log(ampmTime);
+    if(parseInt(sv.firstTime.slice(0,-3))>12){
+        amppmTime = toString(parseInt(toString(sv.firstTime).slice(0,-3)) - 12) + toString(nextArrival).slice(-2) + " PM";
+        ap = "P";
+    }else{
+        ampmTime = sv.firstTime + " AM"
+        ap = "A";
+    }
+    console.log(ampmTime);
     
 
     var nextArrival = "10:30 PM"; //how to do this???
-    var nxtArriveMin = parseInt(nextArrival.slice(0,-6)) + parseInt(nextArrival.slice(3,-3));
+    var nxtArriveMin = moment(nextArrival, "HH:mm " + ap).fromNow().slice(3,-8);
     console.log(nextArrival);
     console.log(nxtArriveMin);
 
