@@ -64,12 +64,13 @@ database.ref().on("child_added", function(snapshot) {
     /*if firstTime < now
     difference between then and now divided by freqeuncy
     nextArrival = now + remainder
-    else, nextArrival = sv.firstTime
+    else, nextArrival = sv.firstTime & nxtArrival = difference
      
     if(moment(firstTime) < moment()){
         nextArrival = moment().diff(moment(firstTime))%sv.Frequency;   
     }else{
         nextArrrival = sv.firstTime;
+        nextArivalMin =moment().diff(moment(firstTime));
     }*/
 
     
