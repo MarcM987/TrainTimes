@@ -61,13 +61,16 @@ database.ref().on("child_added", function(snapshot) {
 
 
     var nextArrival = "11:40 PM"; //how to do this using moments? 
-    //if firstTime < now
-    //difference between then and now divided by freqeuncy
-    //nextTime = now + remainder
-    //else, nextTime = difference between then and now
-    // if(){
-
-    // }
+    /*if firstTime < now
+    difference between then and now divided by freqeuncy
+    nextArrival = now + remainder
+    else, nextArrival = sv.firstTime
+     
+    if(moment(firstTime) < moment()){
+        nextArrival = moment().diff(moment(firstTime))%sv.Frequency;   
+    }else{
+        nextArrrival = sv.firstTime;
+    }*/
 
     
 
