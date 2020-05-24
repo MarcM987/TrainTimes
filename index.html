@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Train Times</title>
+
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron jumbotron-dark bg-dark">
+              <h1>Anytime is Train Time</h1>
+              <h2>Choo Choo. Chee Chee.</h2>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading bg-light text-dark">
+                    <h1 class="panel-title">Current Train Schedule</h1>
+                </div>
+                <div class="panel-body">
+                  <div class="train-list">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Train Times Here -->
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            <div class="panel panel-success">
+              <div class="panel-heading bg-light text-dark">
+                  <h1 class="panel-title">Add Train</h1>
+              </div>
+              <div class="panel-body">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="name">Train Name</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="select-number">Destination</label>
+                    <input type="text" class="form-control" id="role">
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="search">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="start-date">
+                  </div>
+                  <div class="form-group">
+                    <label for="search">Frequency (min)</label>
+                    <input type="text" class="form-control" id="rate">
+                  </div>
+                  <button class="btn btn-dark" id="submit-btn" type="button">Submit</button>
+                  <button class="btn btn-dark" id="submit-btn" type="button">Update</button>
+                  <button class="btn btn-dark" id="submit-btn" type="button">Delete</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
+
+        <script src="./assets/javascript/app.js"></script>
+    </body>
+
+</html>
